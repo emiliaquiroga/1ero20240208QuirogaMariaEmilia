@@ -1,0 +1,174 @@
+body {
+    background-color: rgb(222, 201, 233);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Cambiado a flex-start para que el contenido comience desde arriba */
+    min-height: 100vh;
+    padding: 15px; /* Añadido padding para evitar que el contenido toque los bordes de la pantalla */
+    box-sizing: border-box; /* Asegura que el padding se incluya en las dimensiones */
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 2000px;
+    background-color: rgb(193, 158, 224);
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    box-sizing: border-box;
+}
+
+#ABM {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 500px;
+    background-color: white;
+    padding: 20px;
+    border: 4px solid rgb(156, 124, 165);
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+#ABM form {
+    width: 100%;
+}
+
+#ABM .input, #ABM select {
+    margin: 5px 0;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+#ABM .btn-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    width: 100%;
+}
+
+#ABM .btn, 
+#formularioLista .btn, 
+#formularioLista #btnAgregar {
+    width: 48%;
+    padding: 10px;
+    border: 2px solid rgb(145, 99, 203);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular';
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#ABM .btn:hover, 
+#formularioLista .btn:hover, 
+#formularioLista #btnAgregar:hover {
+    background-color: rgb(145, 99, 203);
+    color: white;
+}
+
+#formularioLista {
+    width: 100%;
+    border-radius: 8px;
+}
+
+#formularioLista .btn-container {
+    display: flex;
+    justify-content: center; /* Centra los botones dentro del contenedor */
+    margin-top: 10px;
+    width: 100%;
+}
+
+#formularioLista #btnAgregar {
+    width: 100%; /* Ocupa todo el ancho del contenedor */
+    max-width: 200px; /* Establece un ancho máximo para el botón */
+    align-self: center; /* Centra el botón dentro del contenedor flex */
+}
+
+table {
+    width: 100%;
+    max-width: 100%; /* Limita la expansión de la tabla */
+    border-collapse: collapse;
+    table-layout: auto;
+    text-align: center;
+}
+
+table th, table td {
+    padding: 10px;
+    border: 1px solid #ccc;
+    word-wrap: break-word;
+}
+
+@media screen and (max-width: 600px) {
+    main {
+        width: 100%;
+        margin: 10px;
+    }
+
+    #ABM .btn-container, 
+    #formularioLista .btn-container {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    #ABM .btn, 
+    #formularioLista .btn {
+        width: 100%;
+    }
+
+    table th, table td {
+        padding: 8px;
+    }
+}
+
+#spinner {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 30, 0.8);
+    z-index: 20000;
+}
+
+#spinner .loader {
+    display: flex;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+#spinner .circle {
+    width: 80px;
+    height: 80px;
+    border: 4px solid transparent;
+    border-top-color: #ffffff;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin-bottom: 20px;
+}
+
+#spinner .loading-text {
+    color: #ffffff;
+    font-size: 24px;
+    margin-top: 10px;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}

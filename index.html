@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alta Baja y Modificacion</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <div id="spinner">
+        <div class="loader">
+            <div class="circle"></div>
+            <div class="loading-text">Loading...</div>
+        </div>
+    </div>
+    <main>
+        <div id="formularioLista">
+            <h2>Formulario Lista</h2>
+            <div>
+                <table id="tabla-vehiculos">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Modelo</th>
+                            <th>Año de Fabricacion</th>
+                            <th>Velocidad Maxima</th>
+                            <th>Cantidad de Puertas</th>
+                            <th>Asientos</th>
+                            <th>Carga</th>
+                            <th>Autonomia</th>
+                            <th>Modificar</th>
+                            <th>Eliminar</th>
+                        </tr>
+                    </thead>
+                    <tbody id="body-tabla"></tbody>
+                </table>
+            </div>
+            <div id="btn-conteiner">
+                <button id="btnAgregar" class="btn">Agregar Elemento</button>
+            </div>
+        </div>
+
+        <div id="ABM">
+            <form>
+                <h1 id="tituloABM">Formulario ABM</h1>
+                <div id="divID" >ID:<input type="number" name="" id="ID" class="input" readonly></div>
+                <div>Modelo: <input type="text" name="" id="txtModelo" class="input"></div>
+                <div>Año de Fabricación: <input type="number" name="" id="numAnoFabricacion" class="input"></div>
+                <div>Velocidad máxima<input type="number" name="" id="numVelMax" placeholder="Ingrese velocidad máxima" class="input"></div>
+                <div>Tipo:
+                    <select id="tipos" class="input">
+                        <option value="Auto" class="input">Auto</option>
+                        <option value="Camion" class="input">Camión</option>
+                    </select>
+                </div>
+                <div id="divCantPuertas">Cantidad de puertas:<input type="number" name="" id="numCantPuertas" placeholder="Ingrese cantidad mayor a 2" class="input"></div>
+                <div id="divAsientos">Asientos:<input type="number" name="" id="numAsientos"  placeholder="Ingrese cantidad mayor a 2"  class="input"></div>
+                <div id="divCarga">Carga:<input type="number" name="" id="numCarga" placeholder="Ingrese cantidad mayor a 0"  class="input"></div>
+                <div id="divAutonomia">Autonomia:<input type="number" name="" id="numAutonomia"  placeholder="Ingrese cantidad mayor a 0" class="input"></div>
+            </form> 
+            <div id="btn-conteiner">
+                <button id="btnAceptar" class="btn">Aceptar</button> 
+                <button id="btnCancelar" class="btn">Cancelar</button>
+            </div>
+        </div>
+    </main>
+    <script src="script.js"></script>
+    <script src="Vehiculo.js"></script>
+    <script src="Auto.js"></script>
+    <script src="Camion.js"></script>
+</body>
+</html>
